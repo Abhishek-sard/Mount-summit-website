@@ -1,13 +1,23 @@
 import React from "react";
-import Navbar from "./Navbar.jsx";
-import Footer from "./Footer.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
+import Home from "./components/Home/Home.jsx";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
+
+      <Routes>
+        {/* Home Page Route */}
+        <Route path="/" element={<Home />} />
+      </Routes>
+
       <Footer />
-    </>
+    </Router>
   );
 }
 
