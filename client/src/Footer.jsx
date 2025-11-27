@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
         <h3 className="text-xl font-semibold mb-4 border-b border-white pb-2">About Us</h3>
-        <p>Bright Future School is dedicated to providing quality education and fostering holistic development in students since 1985.</p>
+        <p>Mount Summit World School is dedicated to providing quality education and fostering holistic development in students since 2054.</p>
         <div className="flex gap-3 mt-4">
           {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube].map((Icon, i) => (
             <a key={i} href="#" className="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transition-transform hover:-translate-y-1">
@@ -38,20 +38,20 @@ const Footer = () => (
         <h3 className="text-xl font-semibold mb-4 border-b border-white pb-2">Contact Info</h3>
         <ul className="flex flex-col gap-4">
           <li className="flex gap-2">
-            <FaMapMarkerAlt className="mt-1"/> <div>123 Education Street, Knowledge City, KC 12345</div>
+            <FaMapMarkerAlt className="mt-1"/> <div>Ramdhuni-1, shiv chowk , Sunsari, Nepal</div>
           </li>
           <li className="flex gap-2">
-            <FaPhone className="mt-1"/> <div>+1 (123) 456-7890, +1 (123) 456-7891</div>
+            <FaPhone className="mt-1"/> <div>9852042044, 98622012750</div>
           </li>
           <li className="flex gap-2">
-            <FaEnvelope className="mt-1"/> <div>info@brightfutureschool.edu, admissions@brightfutureschool.edu</div>
+            <FaEnvelope className="mt-1"/> <div>mountsummitworldschool01@gmail.com</div>
           </li>
         </ul>
       </div>
     </div>
 
     <div className="max-w-6xl mx-auto px-4 mt-12 border-t border-white/20 pt-4 flex flex-col md:flex-row justify-between text-gray-200 text-sm gap-4">
-      <p>&copy; 2023 Bright Future School. All rights reserved.</p>
+      <p>&copy; 2025 Powered by Abhishek Sardar. All rights reserved.</p>
       <div className="flex gap-4">
         {['Privacy Policy', 'Terms of Service', 'Sitemap'].map(link => (
           <a key={link} href="#" className="hover:text-white">{link}</a>
