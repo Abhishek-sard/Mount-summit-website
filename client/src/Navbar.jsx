@@ -34,7 +34,7 @@ export default function App() {
                             <img
                                 src="/logo.jpg"
                                 alt="Mount Summit World School Logo"
-                                className="w-40 h-40 object-contain"
+                                className="w-40 h-40"
                             />
                         </div>
                         <div className="mt-6">
