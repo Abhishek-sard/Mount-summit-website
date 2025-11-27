@@ -27,10 +27,10 @@ const Slider = () => {
 
     return (
         <div className="relative w-full overflow-hidden bg-gray-100" style={{ height: "85vh" }}>
-
-            {/* Main Text Overlay with Nepali Theme */}
+            
+            {/* Main Text Overlay */}
             <div className="absolute top-8 left-8 z-20 bg-gradient-to-r from-blue-600/90 to-green-600/90 px-8 py-6 rounded-2xl backdrop-blur-sm shadow-2xl border-l-4 border-yellow-400">
-                <h1 className="text-white text-4xl font-bold font-sans">
+                <h1 className="text-white text-2xl font-bold font-sans">
                     Quality Education for a Better Future
                 </h1>
                 <p className="text-white text-lg mt-2 font-light">
@@ -65,7 +65,7 @@ const Slider = () => {
                             className="w-full h-full object-cover"
                         />
                         {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 ))}
             </div>
@@ -81,7 +81,7 @@ const Slider = () => {
                 onClick={nextSlide}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition duration-300"
             >
-                <span className="text-2font-bold">›</span>
+                <span className="text-2xl font-bold">›</span>
             </button>
 
             {/* Slide Indicators */}
@@ -90,10 +90,11 @@ const Slider = () => {
                     <button
                         key={i}
                         onClick={() => setIndex(i)}
-                        className={`w-4 h-4 rounded-full transition duration-300 ${i === index
-                                ? "bg-white scale-125"
+                        className={`w-4 h-4 rounded-full transition duration-300 ${
+                            i === index 
+                                ? "bg-white scale-125" 
                                 : "bg-white/60 hover:bg-white/80"
-                            }`}
+                        }`}
                     />
                 ))}
             </div>

@@ -47,44 +47,44 @@ export default function App() {
                 </div>
             ) : (
                 // ---------------- MAIN CONTENT ----------------
-                <div>
+                <div className="min-h-screen">
                     {/* -------- Top Info Bar -------- */}
-                    <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white py-3 shadow-lg border-b border-blue-700">
+                    <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-2 shadow-lg border-b border-blue-600 fixed top-0 left-0 right-0 z-50">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="flex flex-col lg:flex-row justify-between items-center space-y-2 lg:space-y-0">
+                            <div className="flex flex-col lg:flex-row justify-between items-center space-y-1 lg:space-y-0">
                                 {/* Left Section - Contact Info */}
-                                <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
-                                    <div className="flex items-center gap-2 text-sm lg:text-base">
-                                        <CgMail className="text-blue-300 text-lg" />
+                                <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
+                                    <div className="flex items-center gap-2 text-xs lg:text-sm">
+                                        <CgMail className="text-blue-300 text-sm" />
                                         <span className="text-blue-100">mountsummitworldschool01@gmail.com</span>
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm lg:text-base">
-                                        <BsTelephone className="text-blue-300 text-lg" />
+                                    <div className="flex items-center gap-2 text-xs lg:text-sm">
+                                        <BsTelephone className="text-blue-300 text-sm" />
                                         <span className="text-blue-100">9852042044, 9862012750</span>
                                     </div>
                                 </div>
 
                                 {/* Right Section - Official Info & Social */}
-                                <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
-                                    <div className="flex gap-4 text-sm">
-                                        <div className="bg-blue-700/50 px-3 py-1 rounded-full">
+                                <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
+                                    <div className="flex gap-3 text-xs">
+                                        <div className="bg-blue-700/50 px-2 py-1 rounded-full">
                                             <span className="text-blue-100">PAN: 202378977</span>
                                         </div>
-                                        <div className="bg-blue-700/50 px-3 py-1 rounded-full">
+                                        <div className="bg-blue-700/50 px-2 py-1 rounded-full">
                                             <span className="text-blue-100">REG NO: 2201, Sunsari</span>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Social Media Icons */}
-                                    <div className="flex gap-3">
+                                    <div className="flex gap-2">
                                         <a href="#" className="text-blue-300 hover:text-white transition duration-300">
-                                            <BsFacebook className="text-lg" />
+                                            <BsFacebook className="text-sm" />
                                         </a>
                                         <a href="#" className="text-blue-300 hover:text-white transition duration-300">
-                                            <BsYoutube className="text-lg" />
+                                            <BsYoutube className="text-sm" />
                                         </a>
                                         <a href="#" className="text-blue-300 hover:text-white transition duration-300">
-                                            <BsInstagram className="text-lg" />
+                                            <BsInstagram className="text-sm" />
                                         </a>
                                     </div>
                                 </div>
@@ -93,29 +93,29 @@ export default function App() {
                     </div>
 
                     {/* -------- Main Navbar -------- */}
-                    <nav className={`bg-white sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'shadow-2xl py-2' : 'shadow-lg py-4'}`}>
+                    <nav className={`bg-white fixed top-[40px] left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'shadow-2xl py-1' : 'shadow-lg py-2'}`}>
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="flex items-center justify-between">
                                 {/* Logo Section */}
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-2">
                                     <img
                                         src="/logo.jpg"
                                         alt="Mount Summit World School Logo"
-                                        className={`transition-all duration-300 ${scrolled ? 'w-16 h-16' : 'w-20 h-20'}`}
+                                        className={`transition-all duration-300 ${scrolled ? 'w-12 h-12' : 'w-16 h-16'}`}
                                     />
-                                    <div className={`transition-all duration-300 ${scrolled ? 'scale-95' : ''}`}>
-                                        <h1 className="text-xl font-bold text-blue-900 leading-tight">
+                                    <div className={`transition-all duration-300 ${scrolled ? 'scale-90' : ''}`}>
+                                        <h1 className="text-lg font-bold text-blue-900 leading-tight">
                                             Mount Summit World School
                                         </h1>
                                         <p className="text-xs text-gray-600 font-medium">
-                                            Quality Education in Sunsari, Nepal
+                                            ShivChowk, Sunsari
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Desktop Navigation */}
-                                <div className="hidden lg:flex items-center gap-8">
-                                    <div className="flex gap-8 font-semibold">
+                                <div className="hidden lg:flex items-center gap-6">
+                                    <div className="flex gap-6 font-semibold">
                                         {[
                                             { name: "Home", href: "#" },
                                             { name: "About", href: "#" },
@@ -128,7 +128,7 @@ export default function App() {
                                             <a
                                                 key={item.name}
                                                 href={item.href}
-                                                className="text-gray-700 hover:text-blue-700 relative group transition duration-300"
+                                                className="text-gray-700 hover:text-blue-700 relative group transition duration-300 text-sm"
                                             >
                                                 {item.name}
                                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -137,41 +137,41 @@ export default function App() {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <button className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 flex items-center gap-2">
+                                    <button className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 flex items-center gap-2 text-sm">
                                         <span>Apply Now</span>
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </button>
                                 </div>
 
                                 {/* Mobile Menu Button */}
-                                <button 
-                                    className="lg:hidden text-gray-700 p-2"
+                                <button
+                                    className="lg:hidden text-gray-700 p-1"
                                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 >
-                                    {isMenuOpen ? <HiX className="text-2xl" /> : <HiMenu className="text-2xl" />}
+                                    {isMenuOpen ? <HiX className="text-xl" /> : <HiMenu className="text-xl" />}
                                 </button>
                             </div>
 
                             {/* Mobile Navigation */}
                             {isMenuOpen && (
                                 <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-200">
-                                    <div className="flex flex-col p-4 space-y-4">
+                                    <div className="flex flex-col p-3 space-y-3">
                                         {[
-                                            "Home", "About", "Academics", "Admissions", 
+                                            "Home", "About", "Academics", "Admissions",
                                             "Faculty", "Events", "Contact"
                                         ].map((item) => (
                                             <a
                                                 key={item}
                                                 href="#"
-                                                className="text-gray-700 hover:text-blue-700 font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition duration-300"
+                                                className="text-gray-700 hover:text-blue-700 font-semibold py-2 px-3 rounded-lg hover:bg-blue-50 transition duration-300 text-sm"
                                                 onClick={() => setIsMenuOpen(false)}
                                             >
                                                 {item}
                                             </a>
                                         ))}
-                                        <button className="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-3 rounded-lg font-semibold mt-4">
+                                        <button className="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-2 rounded-lg font-semibold mt-3 text-sm">
                                             Apply Now
                                         </button>
                                     </div>
@@ -179,6 +179,11 @@ export default function App() {
                             )}
                         </div>
                     </nav>
+
+                    {/* Content Spacer - Reduced gap */}
+                    <div className="pt-[200px]"> {/* Reduced from 136px to 80px */}
+                        {/* Your main content goes here - Slider will start right after navbar */}
+                    </div>
                 </div>
             )}
         </>
