@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { CgMail } from "react-icons/cg";
+import { BsTelephone } from "react-icons/bs";
 
 export default function App() {
     const [loading, setLoading] = useState(true);
@@ -20,7 +22,7 @@ export default function App() {
                         <img
                             src="/logo.jpg"
                             alt="School Logo"
-                            className="w-50 h-50 "
+                            className="w-48 h-48 "
                         />
                     </div>
                 </div>
@@ -29,22 +31,26 @@ export default function App() {
                 <div>
                     {/* -------- Top Navbar -------- */}
                     <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 shadow-md">
-                        <div className="max-w-6xl mx-auto flex justify-between px-4 text-sm">
-                            <div className="flex gap-6">
+                        <div className="max-w-6xl mx-auto flex justify-between px-4 text-sm items-center">
+                            <div className="flex gap-6 items-center">
+                                {/* Email */}
                                 <div className="flex items-center gap-2">
-                                    <span>contact@school.edu</span>
+                                    <CgMail className="text-lg" />
+                                    <span>mountsummitworldschool01@gmail.com</span>
                                 </div>
+                                {/* Phone */}
                                 <div className="flex items-center gap-2">
-                                    <span>+1 (123) 456-7890</span>
+                                    <BsTelephone className="text-lg" />
+                                    <span>9852042044</span>
                                 </div>
                             </div>
 
-                            <div className="flex gap-6">
+                            <div className="flex gap-6 items-center">
                                 <div className="flex items-center gap-2">
-                                    <span>PAN: ABCDE1234F</span>
+                                    <span>PAN: 202378977</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span>REG NO: 2023SCH001</span>
+                                    <span>REG NO: 2201, Sunsari</span>
                                 </div>
                             </div>
                         </div>
