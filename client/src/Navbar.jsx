@@ -30,7 +30,7 @@ export default function App() {
                 // ---------------- MAIN CONTENT ----------------
                 <div>
                     {/* -------- Top Navbar -------- */}
-                    <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 shadow-md">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 shadow-md">
                         <div className="max-w-6xl mx-auto flex justify-between px-4 text-sm items-center">
                             <div className="flex gap-6 items-center">
                                 {/* Email */}
@@ -41,7 +41,7 @@ export default function App() {
                                 {/* Phone */}
                                 <div className="flex items-center gap-2">
                                     <BsTelephone className="text-lg" />
-                                    <span>9852042044</span>
+                                    <span>9852042044, 9862012750</span>
                                 </div>
                             </div>
 
@@ -57,17 +57,14 @@ export default function App() {
                     </div>
 
                     {/* -------- Main Navbar -------- */}
-                    <div className="bg-white shadow-md py-4">
+                    <div className="bg-white shadow-[0_4px_6px_rgba(0,128,0,0.4)] py-0">
                         <div className="max-w-6xl mx-auto flex items-center justify-between px-4">
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-1">
                                 <img
                                     src="/logo.jpg"
                                     alt="School Logo"
-                                    className="w-12 h-12 rounded-full object-cover"
+                                    className="w-18 h-18"
                                 />
-                                <h1 className="text-2xl font-bold text-blue-700">
-                                    Bright Future School
-                                </h1>
                             </div>
 
                             <div className="hidden md:flex gap-8 font-semibold">
@@ -85,6 +82,7 @@ export default function App() {
                             </button>
                         </div>
                     </div>
+
 
                 </div>
             )}
