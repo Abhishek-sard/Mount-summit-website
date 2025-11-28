@@ -19,7 +19,7 @@ const Count = () => {
       <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-green-200 rounded-full opacity-30 animate-pulse"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
           Our Achievements
         </h2>
 
