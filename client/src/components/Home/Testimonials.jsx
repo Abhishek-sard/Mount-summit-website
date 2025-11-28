@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const testimonials = [
-  { img: "/s1.jpg", name: "Aarav Sharma", class: "Class 8", text: "This school helped me gain confidence and improve my studies. Teachers are very friendly!" },
-  { img: "/s2.jpg", name: "Sneha Karki", class: "Class 10", text: "Amazing environment! I enjoy the practical learning and discipline here." },
-  { img: "/s3.jpg", name: "Rohan Magar", class: "Class 6", text: "I love the sports facilities and computer lab. Best school experience!" },
-  { img: "/s4.jpg", name: "Priya Joshi", class: "Class 9", text: "Teachers always encourage us to do better. I feel very supported." },
+  { img: "/logo.jpg", name: "Aarav Sharma", class: "Class 8", text: "This school helped me gain confidence and improve my studies. Teachers are very friendly!" },
+  { img: "/logo.jpg", name: "Sneha Karki", class: "Class 10", text: "Amazing environment! I enjoy the practical learning and discipline here." },
+  { img: "/logo.jpg", name: "Rohan Magar", class: "Class 6", text: "I love the sports facilities and computer lab. Best school experience!" },
+  { img: "/logo.jpg", name: "Priya Joshi", class: "Class 9", text: "Teachers always encourage us to do better. I feel very supported." },
 ];
 
 const Testimonials = () => {

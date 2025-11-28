@@ -2,19 +2,26 @@ import React from "react";
 
 const Achievements = () => {
   const galleryImages = [
-    "/gallery1.jpg",
-    "/gallery2.jpg",
-    "/gallery3.jpg",
-    "/gallery4.jpg",
-    "/gallery5.jpg",
-    "/gallery6.jpg",
-    "/gallery7.jpg",
-    "/gallery8.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
+    "/logo.jpg",
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 text-center">
+    <section className="relative py-16 bg-gray-50 overflow-hidden">
+      {/* Decorative Ribbon/Watermark Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-blue-200 to-blue-400 rounded-full opacity-20 rotate-45 animate-pulse"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-purple-200 to-purple-400 rounded-full opacity-20 rotate-12 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-gradient-to-r from-yellow-200 to-yellow-400 rounded-full opacity-10 -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+      </div>
+
+      <div className="relative max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
           Our Achievements & Results
         </h2>
@@ -32,8 +39,10 @@ const Achievements = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition transform hover:scale-105"
+              className="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transition transform hover:scale-105 relative overflow-hidden"
             >
+              {/* Ribbon effect behind card */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-300 rounded-full opacity-20 rotate-45 pointer-events-none"></div>
               <h3 className="text-4xl font-extrabold text-blue-700">{item.title}</h3>
               <p className="text-lg font-semibold text-gray-700 mt-2">{item.subtitle}</p>
               <p className="text-gray-900 text-sm mt-2">{item.description}</p>
@@ -49,7 +58,7 @@ const Achievements = () => {
                 key={index}
                 src={img}
                 alt={`Gallery ${index + 1}`}
-                className="w-40 h-28 rounded-lg object-cover flex-shrink-0"
+                className="w-40 h-28 rounded-lg object-cover flex-shrink-0 shadow-md"
               />
             ))}
           </div>
