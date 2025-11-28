@@ -6,53 +6,44 @@ const faqs = [
     {
         question: "Experienced Faculty",
         icon: <FaChalkboardTeacher className="text-blue-600" />,
-        answer:
-            "Our teachers are highly qualified and experienced to provide the best education for your child.",
+        answer: "Our teachers are highly qualified and experienced to provide the best education for your child.",
     },
     {
         question: "Modern Classrooms & Labs",
         icon: <FaLaptop className="text-green-600" />,
-        answer:
-            "We provide state-of-the-art classrooms and laboratories for interactive and practical learning.",
+        answer: "We provide state-of-the-art classrooms and laboratories for interactive and practical learning.",
     },
     {
         question: "Sports & Extracurricular Programs",
         icon: <FaFootballBall className="text-red-600" />,
-        answer:
-            "We encourage students to participate in sports, arts, and various extracurricular activities.",
+        answer: "We encourage students to participate in sports, arts, and various extracurricular activities.",
     },
     {
         question: "Safe and Friendly Environment",
         icon: <FaSmile className="text-yellow-600" />,
-        answer:
-            "We maintain a safe, friendly, and supportive environment for every student.",
+        answer: "We maintain a safe, friendly, and supportive environment for every student.",
     },
     {
         question: "Library & Reading Programs",
         icon: <FaLaptop className="text-purple-600" />,
-        answer:
-            "Our library is well-stocked with books and digital resources, encouraging reading and research habits.",
+        answer: "Our library is well-stocked with books and digital resources, encouraging reading and research habits.",
     },
     {
         question: "Innovative Teaching Methods",
         icon: <FaChalkboardTeacher className="text-pink-600" />,
-        answer:
-            "We use modern teaching techniques and technology-enhanced learning to make education engaging and effective.",
+        answer: "We use modern teaching techniques and technology-enhanced learning to make education engaging and effective.",
     },
     {
         question: "Parent-Teacher Collaboration",
         icon: <FaSmile className="text-orange-600" />,
-        answer:
-            "We maintain regular communication with parents to track students' progress and ensure their holistic development.",
+        answer: "We maintain regular communication with parents to track students' progress and ensure their holistic development.",
     },
     {
         question: "Community & Social Responsibility",
         icon: <FaFootballBall className="text-teal-600" />,
-        answer:
-            "We encourage students to participate in community service and social responsibility programs to build character and empathy.",
+        answer: "We encourage students to participate in community service and social responsibility programs to build character and empathy.",
     },
 ];
-
 
 const WhyChooseUs = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -72,7 +63,7 @@ const WhyChooseUs = () => {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-xl shadow-md overflow-hidden"
+                            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
@@ -82,20 +73,20 @@ const WhyChooseUs = () => {
                                     {faq.icon}
                                     {faq.question}
                                 </div>
-                                <div className="text-blue-600">
+                                <div className="text-blue-600 transition-transform duration-300">
                                     {activeIndex === index ? (
-                                        <HiChevronUp className="w-5 h-5" />
+                                        <HiChevronUp className="w-5 h-5 rotate-180" />
                                     ) : (
                                         <HiChevronDown className="w-5 h-5" />
                                     )}
                                 </div>
                             </button>
 
-                            {activeIndex === index && (
-                                <div className="px-6 pb-4 text-gray-600 text-sm transition-all duration-300">
-                                    {faq.answer}
-                                </div>
-                            )}
+                            <div
+                                className={`px-6 text-gray-600 text-sm transition-all duration-500 overflow-hidden ${activeIndex === index ? "max-h-96 pb-4" : "max-h-0"}`}
+                            >
+                                {faq.answer}
+                            </div>
                         </div>
                     ))}
                 </div>

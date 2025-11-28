@@ -13,8 +13,8 @@ const stats = [
 
 const Count = () => {
   return (
-    <div className="py-16 relative bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
-      {/* Decorative circles */}
+    <section className="py-16 relative bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+      {/* Decorative Circles */}
       <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-200 rounded-full opacity-30 animate-pulse"></div>
       <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-green-200 rounded-full opacity-30 animate-pulse"></div>
 
@@ -23,12 +23,12 @@ const Count = () => {
           Our Achievements
         </h2>
 
-        {/* Flex container for a single row */}
-        <div className="flex flex-wrap justify-center gap-6">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 justify-center">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-5 w-40 md:w-48 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden text-center"
+              className="bg-white rounded-xl p-5 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden text-center"
             >
               {/* Icon */}
               <div
@@ -49,7 +49,7 @@ const Count = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
