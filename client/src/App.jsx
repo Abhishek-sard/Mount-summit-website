@@ -11,6 +11,9 @@ import WhyChooseUs from "./components/Home/WhyChooseUs.jsx";
 import Achievements from "./components/Home/Achievements.jsx";
 import Testimonials from "./components/Home/Testimonials.jsx";
 
+import AboutIntro from "./components/About/AboutIntro.jsx";
+
+
 function Home(){
   return(
     <>
@@ -23,12 +26,21 @@ function Home(){
     </>
   )
 }
+
+function AboutUs(){
+  return(
+    <>
+    <AboutIntro/>
+=    </>
+  )
+}
 function App() {
   return (
     <Router>
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       <Footer />
     </Router>
