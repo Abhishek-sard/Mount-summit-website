@@ -9,6 +9,7 @@ import Count from "./components/Home/Count.jsx";
 import Image from "./components/Home/Image.jsx";
 import WhyChooseUs from "./components/Home/WhyChooseUs.jsx";
 import Achievements from "./components/Home/Achievements.jsx";
+import Testimonials from "./components/Home/Testimonials.jsx";
 
 function Home(){
   return(
@@ -18,6 +19,7 @@ function Home(){
     <Image/>
     <WhyChooseUs/>
     <Achievements/>
+    <Testimonials/>
     </>
   )
 }
