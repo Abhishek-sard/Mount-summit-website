@@ -5,11 +5,13 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 import Intro from "./components/Home/intro.jsx";
+import Count from "./components/Home/Count.jsx";
 
 function Home(){
   return(
     <>
     <Intro/>
+    <Count/>
     </>
   )
 }
