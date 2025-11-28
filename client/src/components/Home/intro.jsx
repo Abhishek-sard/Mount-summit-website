@@ -18,15 +18,7 @@ const Intro = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
 
   return (
     <div className="relative w-full h-96 md:h-[500px] overflow-hidden">
@@ -42,29 +34,7 @@ const Intro = () => {
         />
       ))}
 
-      {/* Overlay Text */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 text-center text-green-400">
-        <h1 className="text-3xl md:text-5xl font-bold drop-shadow-lg">
-          Welcome to Mount Summit World School
-        </h1>
-        <p className="mt-2 text-lg md:text-2xl drop-shadow-md">
-          Providing Quality Education for Everyone
-        </p>
-      </div>
-
-      {/* Navigation Buttons */}
-      <button
-        onClick={goToPrevious}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-50 p-3 rounded-full hover:bg-opacity-80"
-      >
-        &#10094;
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-50 p-3 rounded-full hover:bg-opacity-80"
-      >
-        &#10095;
-      </button>
+ 
 
       {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
