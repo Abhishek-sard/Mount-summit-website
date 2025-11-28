@@ -8,7 +8,7 @@ const Image = () => {
         {/* Left Side Image */}
         <div className="flex justify-center md:justify-start">
           <img
-            src="/image.png"
+            src="/line.png"
             alt="School"
             className="rounded-xl shadow-lg w-full md:w-auto max-w-md"
           />
