@@ -9,12 +9,15 @@ import Home from "./components/Home/Home.jsx";
 function App() {
   return (
     <Router>
+      {/* Fixed Navbar */}
       <Navbar />
 
-      <Routes>
-        {/* Home Page Route */}
-        <Route path="/" element={<Home />} />
-      </Routes>
+   
+       
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      
 
       <Footer />
     </Router>
