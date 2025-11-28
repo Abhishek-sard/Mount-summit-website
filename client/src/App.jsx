@@ -6,14 +6,18 @@ import Footer from "./Footer";
 
 import Intro from "./components/Home/intro.jsx";
 import Count from "./components/Home/Count.jsx";
+import Image from "./components/Home/Image.jsx";
 import WhyChooseUs from "./components/Home/WhyChooseUs.jsx";
+import Achievements from "./components/Home/Achievements.jsx";
 
 function Home(){
   return(
     <>
     <Intro/>
     <Count/>
+    <Image/>
     <WhyChooseUs/>
+    <Achievements/>
     </>
   )
 }

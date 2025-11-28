@@ -15,7 +15,6 @@ import {
 } from "react-icons/hi";
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [loading, setLoading] = useState(true);
 
@@ -110,9 +109,10 @@ const Navbar = () => {
             <nav className={`bg-white/95 backdrop-blur-md sticky top-0 z-40 transition-all duration-500 ${scrolled ? 'shadow-2xl border-b border-gray-200/50' : 'shadow-lg'}`}>
                 <div className="max-w-8xl mx-auto px-4">
                     <div className="flex items-center justify-between">
+
                         {/* Logo */}
                         <div className="flex items-center gap-2">
-                            <img src="/logo.jpg" alt="Mount Summit World School" className="w-24 h-24 object-contain m-0 p-0" />
+                            <img src="/logo.jpg" alt="Mount Summit World School" className="w-24 h-24 object-contain" />
                             <div className="flex flex-col">
                                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent leading-tight">
                                     Mount Summit World School
@@ -124,42 +124,25 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* Desktop Menu */}
-                        <div className="hidden xl:flex items-center gap-8">
-                            <div className="flex items-center gap-8">
-                                {["Home","About","Academics","Admissions","Faculty","Events","Contact"].map((item) => (
-                                    <a key={item} href="#" className="py-2 px-1 font-semibold text-gray-700 hover:text-blue-600">{item}</a>
-                                ))}
-                            </div>
-                            <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
-                                Apply Now
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
+                        {/* Menu always visible on all screen sizes */}
+                        <div className="flex items-center gap-4">
+                            {["Home", "About", "Academics", "Admissions", "Faculty", "Events", "Contact"].map((item) => (
+                                <a
+                                    key={item}
+                                    href="#"
+                                    className="py-2 px-1 font-semibold text-gray-900 hover:text-blue-600"
+                                >
+                                    {item}
+                                </a>
+                            ))}
+
+                           
                         </div>
 
-                        {/* Mobile Button */}
-                        <button className="xl:hidden p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-300" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                            {isMenuOpen ? <HiX className="text-gray-700 text-xl" /> : <HiMenu className="text-gray-700 text-xl" />}
-                        </button>
                     </div>
                 </div>
-
-                {/* Mobile Menu */}
-                {isMenuOpen && (
-                    <div className="xl:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/50 shadow-2xl">
-                        <div className="max-w-8xl mx-auto px-4 py-4 flex flex-col space-y-3">
-                            {["Home","About","Academics","Admissions","Faculty","Events","Contact"].map((item) => (
-                                <a key={item} href="#" className="py-3 px-4 text-gray-700 hover:text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300" onClick={() => setIsMenuOpen(false)}>{item}</a>
-                            ))}
-                            <button className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                                Apply Now
-                            </button>
-                        </div>
-                    </div>
-                )}
             </nav>
+
 
             {/* Scrolling Ticker */}
             <div className="bg-blue-400 text-white py-2 overflow-hidden relative">
