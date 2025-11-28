@@ -13,6 +13,7 @@ import Testimonials from "./components/Home/Testimonials.jsx";
 
 import AboutIntro from "./components/About/AboutIntro.jsx";
 import IntroAcademic from "./components/Academic/IntroAcademic.jsx";
+import IntroContact from "./components/Contact/IntroContact.jsx";
 
 
 function Home() {
@@ -43,6 +44,14 @@ function Academics(){
     </>
   )
 }
+
+function ContactUs(){
+  return(
+    <>
+    <IntroContact/>
+    </>
+  )
+}
 function App() {
   return (
     <Router>
@@ -51,6 +60,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/academics" element={<Academics/>} />
+        <Route path="/contact" element={<ContactUs/>} />
       </Routes>
       <Footer />
     </Router>

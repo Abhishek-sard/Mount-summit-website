@@ -34,9 +34,7 @@ const Navbar = () => {
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Academics", link: "/academics" },
-    { name: "Admissions", link: "/admissions" },
-    { name: "Faculty", link: "/faculty" },
-    { name: "Events", link: "/events" },
+    { name: "Blogs", link: "/blogs" },
     { name: "Contact", link: "/contact" }
   ];
 
