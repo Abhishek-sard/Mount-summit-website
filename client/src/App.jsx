@@ -12,36 +12,46 @@ import Achievements from "./components/Home/Achievements.jsx";
 import Testimonials from "./components/Home/Testimonials.jsx";
 
 import AboutIntro from "./components/About/AboutIntro.jsx";
+import IntroAcademic from "./components/Academic/IntroAcademic.jsx";
 
 
-function Home(){
-  return(
+function Home() {
+  return (
     <>
-    <Intro/>
-    <Count/>
-    <Image/>
-    <WhyChooseUs/>
-    <Achievements/>
-    <Testimonials/>
+      <Intro />
+      <Count />
+      <Image />
+      <WhyChooseUs />
+      <Achievements />
+      <Testimonials />
     </>
   )
 }
 
-function AboutUs(){
+function AboutUs() {
+  return (
+    <>
+      <AboutIntro />
+    </>
+  )
+}
+
+function Academics(){
   return(
     <>
-    <AboutIntro/>
-=    </>
+    <IntroAcademic/>
+    </>
   )
 }
 function App() {
   return (
     <Router>
       <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/academics" element={<Academics/>} />
+      </Routes>
       <Footer />
     </Router>
   );
