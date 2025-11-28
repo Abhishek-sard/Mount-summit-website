@@ -2,13 +2,13 @@ import React from "react";
 
 const Achievements = () => {
   const galleryImages = [
-    "/logo.jpg",
-    "/logo.jpg",
-    "/logo.jpg",
-    "/logo.jpg",
-    "/logo.jpg",
-    "/logo.jpg",
-    "/logo.jpg",
+    "/achieve.png",
+    "/group.png",
+    "/price.png",
+    "/image.png",
+    "/root.png",
+    "/school.png",
+    "/change.png",
     "/logo.jpg",
   ];
 
@@ -58,7 +58,7 @@ const Achievements = () => {
                 key={index}
                 src={img}
                 alt={`Gallery ${index + 1}`}
-                className="w-40 h-28 rounded-lg object-cover flex-shrink-0 shadow-md"
+                className="w-50 h-38 rounded-lg object-cover flex-shrink-0 shadow-md"
               />
             ))}
           </div>

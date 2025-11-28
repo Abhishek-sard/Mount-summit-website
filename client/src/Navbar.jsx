@@ -138,7 +138,7 @@ const Navbar = () => {
       </nav>
 
       {/* Scrolling Ticker */}
-      <div className="bg-blue-400 text-white py-2 overflow-hidden relative">
+      <div className="bg-blue-700 text-white py-2 overflow-hidden relative">
         <div className="whitespace-nowrap animate-scroll">
           <span className="mx-4">
             Welcome to Mount Summit World School! Admissions Open for 2025 | Call Now: 9852042044, 9862012750
